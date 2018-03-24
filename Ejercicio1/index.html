@@ -1,22 +1,63 @@
 <!doctype html>
-<!-- ejemplo de un conjunto de documentos html con navegación interna
-- realizado por el profesor Carlos Delgado para el curso Gráfica interactiva de la Universidad Nacional de Colombia-->
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Nombre de la pestaña</title>
+<!--referencia a la hoja de estilos que estoy usando-->
 <link href= "estilos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<h1><a href="index.html" target="_self">TITULO DEL SITIO</a></h1>
+  <!-- Titulo -->
+<h1><a href="index.html" target="_self">Centro de opinion</a></h1>
+<!-- barra de navegacion lateral-->
 <nav>
-<a class = "navLateralitem" href="it.html" target="_self"><button>It</button></a>
-<a class = "navLateralitem" href="harry_potter.html" target="_self"><button>Harry Potter</button></a>
-<a class = "navLateralitem" href="dunkerke.html" target="_self"><button>Dunkerke</button></a>
-<a class = "navLateralitem" href="betty_la_fea.html" target="_self"><button>Betty la fea</button></a>
-<a class = "navLateralitem" href="glee.html" target= "_self"><button>Glee</button></a>
-<a class = "navLateralitem" href = "gravity_falls.html" target = "_self"><button>Gravity Falls</button></a>
+<a class="botonMenu" href="it.html" target="_self">It</a>
+<a class="botonMenu" href="harry_potter.html" target="_self">Harry Potter</a>
+<a class="botonMenu" href="dunkerke.html" target="_self">Dunkerke</a>
+<a class="botonMenu" href="betty_la_fea.html" target="_self">Betty la fea</a>
+<a class="botonMenu" href="glee.html" target= "_self">Glee</a>
+<a class="botonMenu" href = "gravity_falls.html" target = "_self">Gravity Falls</a>
 </nav>
+ <!-- pequena introduccion-->
+<p class="miniRes1"> Hola, mi nombre es Laura Santos. <br> En esta página podrás ver algunas
+  opiniones y sinopsis que tengo sobre mis peliculas, libros y series
+  preferidas, te invito a que eches una vistazo por cada una de ellas. </p>
+ <!-- Menu de imagenes: me puedo dirigir a cualquier parte
+de mi sitio web el seleccionar una imagen
+cuando el cursos pasa sobre la imagen, la opacidad y el tamano aumentan -->
+<div class="menu">
+  <h2>Selecciona la serie/pelicula/libro que te interese:</h2>
+  <a href="harry_potter.html">
+    <img src="imagenes/harryp.jpeg" alt="HTML tutorial">
+  </a>
+  <a href="glee.html">
+    <img src="imagenes/glee1.jpg" alt="HTML tutorial">
+  </a>
+  <a href="it.html">
+    <img src="imagenes/it.jpg" alt="HTML tutorial">
+  </a>
+  <a href="betty_la_fea.html">
+    <img src="imagenes/betty1.jpg" alt="HTML tutorial">
+  </a>
+  <a href="dunkerke.html">
+    <img src="imagenes/dunkerque1.jpeg" alt="HTML tutorial">
+  </a>
+  <a href="gravity_falls.html">
+    <img src="imagenes/gravity.jpg" alt="HTML tutorial">
+  </a>
+</div>
+ <!-- Parte final de la pagina, da un menu de navegacion
+y ademas informacion sobre el autor de la pagina -->
+<footer>
+  <p>Pagina centro de opiniones</p>
+  <p><ul>
+    <li><a href="index.html" target="_self">Inicio</a></li>
+    <li><a href="harry_potter.html" target="_self">Harry Potter</a></li>
+    <li><a href="it.html" target="_self">It</a></li>
+    <li><a href="gravity_falls.html" target="_self">Gravity Falls</a></li>
+  </p>
+  <p>Laura Santos Guerrero | Contacto: <a href="mailto:lbsantosg@unal.edu.co">lbsantosg@unal.edu.co</a></p>
+</footer>
 </body>
 </html>

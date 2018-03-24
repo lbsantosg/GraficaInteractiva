@@ -1,5 +1,6 @@
 @charset "UTF-8";
-
+/* tipo de letra que voy a usar en la pagina,
+es adecuado proveerla en caso que el usuario no la tenga*/
 @font-face {
     font-family: Ancizar Sans-regular;
     src: url('../fonts/Ancizar Sans-Regular.otf');
@@ -8,62 +9,275 @@
     font-family: Ancizar Serif-bold;
     src: url('../fonts/Ancizar Serif-Bold.otf');
 }
+/* color de fondo */
 body {
-    background-color: #c8d3e5;
+    background-color:#85e0e0;
 }
+/* tamaño que se le da a las imagenes que perteneces a una
+tabla de personajes */
+img.resize {
+  width:140px;
+  height:120px;
+}
+/* manera de manejar una estructura de dos divisiones como
+una misma */
+.personaje{
+  /* texto y nombre del personaje */
+  float: left;
+  width:200px;
+  text-align: justify;
+  border:1px solid blue;
+}
+.personajec{
+  /* foto unida con el texto */
+  float: left;
+  width:410px;
+  margin: 20px;
+  padding: 10px 20px;
+  border: 1px solid red;
+  text-align: justify;
+  padding: 10px 20px;
+}
+/* manera de manejar la tabla de contenidos con la imagen como
+una sola */
+.glee{
+  border: 1px solid green;
+  width: 70%;
+  margin:20px;
+  float: none;
+}
+.glee img{
+  width: 50%;
+  height: 20%;
+  max-width: 350px;
+}
+/* estructura de una tabla */
+.uno {
+	position: relative;
+	max-width:1000px;
+	top: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	text-align: justify;
+	color:#051414;
+	box-shadow: 10px 15px 15px 0 rgba(0,0,0,0.4);
+  border: 1px solid green;
+}
+/* barra de navegacion lateral,
+flotante hacia la derecha, con cada uno de sus elementos pegados
+es parte de una lista, por lo que cada uno de sus items
+sera clase li  */
 .navLateral {
   list-style-type: none;
-  margin-top: -1px;
   margin-bottom: 10px;
-  margin-right: 50px;
-  margin-left: 0px;
+  margin-right: 20px;
+  margin-left: 10px;
   padding: 0;
   width: 25%;
   background-color: #f1f1f1;
   cursor:pointer;
   text-align: center;
-  float:left;
+  float:right;
 }
+/* cada item de la barra*/
 .navLateral li{
-  height: 50px;
 	color:#666666;
-  line-height: 2.6;
+  line-height: 2.9;
+  font-size: 20px;
+  border: solid gray;
 }
+/* item que ademas sea boton */
 .navLateral button{
+  display: block;
+  line-height: 1.8;
   width: 100%;
-  height: 100%;
   border: none;
   background-color: inherit;
   color: inherit;
 }
+/* descripcion de la letra del link*/
 .navLateral button a{
-  text-decoration: none;
-  flex-grow: 1;
-  padding: 18px 70px 18px 75px ;
+  font-size: 24px;
+  display: block;
 }
+/* hover sobre los botones, mas no sobre todos los items*/
 .navLateral button:hover{
   color: white;
   background-color: #555;
 }
+/* tabla de contenido, flotante a la izquiera
+border style ridge le da ese tipo de borde*/
+.tablaContenido{
+  list-style-type: none;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 10px;
+  padding: 2%;
+  width: 20%;
+  background-color: #c2efef;
+  cursor:pointer;
+  text-align: center;
+  float:left;
+  border-style: ridge;
+  max-width: 300px;
+  min-width: 200px;
+}
+.tablaContenido li{
+  font-size: 24px;
+  color:#103d3d;
+  padding: 2px;
+}
+/* permitie señalar que es un link y el usuario puede
+oprimirlo  */
+.tablaContenido a:hover {
+    text-decoration: underline;
+}
+/* botones de la barra de navegacion superior horizontal */
+.botonMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	width: 160px;
+	padding:5px 10px 6px 10px;
+	float:left;
+	cursor: pointer;
+  border: 0.5px solid gray;
+  background-color: #f1f1f1;
+  color: #666666;
+}
+.botonMenu a{
+	background-color: #666666;
+}
+.botonMenu:link {
+	color:#666666;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #0e7ab5;
+}
+.botonMenu:hover {
+	color:#FFFFFF;
+	cursor:pointer;
+  background-color: #666666;
+}
+/* estilo de las mini reseñas  */
+.miniRes{
+  /* reseña de libro */
+  font-style: oblique;
+  color: #141f1f;
+  font-size: 24px;
+  background-color: #d6f5f5;
+}
+.miniRes1{
+  /* creseña de presentacion */
+  font-style: oblique;
+  color: #141f1f;
+  font-size: 24px;
+  background-color: #d6f5f5;
+  clear:both;
+  margin: 10px 10px;
+}
+/* menu principal de fotos que sirven como links */
+.menu{
+  clear:both;
+  width: 90%;
+  border: 1px solid green;
+  margin: 20px;
+}
+.menu img{
+  width: 200px;
+  height: 200px;
+}
+/* permite manejar la opacidad y el tamaño mientras el cursos
+se encuentra sobre la imagen*/
+.menu img:hover {
+    opacity: 0.5;
+    width: 205px;
+    height: 205px;
+}
+/* parte inferior de la hoja, comun a todas las paginas
+no debe ser invasiba, pero si util */
+footer{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: #3D3B3B;
+	padding: 10px;
+}
+footer p{
+	color: #99ddff;
+  text-align: center;
+}
+footer a{
+	color: #66ccff;
+}
+/* especificaciones de un parrafo*/
 p{
 margin-top: 10px;
-margin-bottom: 100px;
-margin-right: 50px;
-margin-left: 20px;
+margin-bottom: 20px;
+margin-right: 10px;
+margin-left:20 px;
 text-align:justify;
+border: 1px solid green;
+font-size: 20px;
 }
+/* evita que las letras de los links esten subrayadas */
 a{
   color:inherit;
+  text-decoration: none;
 }
-
+/* especificaciones de los titulos h1*/
 h1 {
 	font-family: Ancizar Serif-bold;
-	font-size: 32px;
+	font-size: 40px;
 	font-style: normal;
-	font-weight: bold;
-	color: #993300;
-	text-shadow: 1px 1px #000000;
+	font-weight: 900;
+	color:#540CE8;
 	text-align: center;
 	min-width:200px;
   max-width:840px;
+}
+/* da diferentes caraxteristicas segun el tamaño de la pantalla
+con la que se este visualizando la pagina*/
+@media only screen and (max-width: 835px) {
+.menunav {
+	min-width:200px;
+    max-width:480px;
+}
+.texto {
+	font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 720px) {
+	body {
+    background-color: #e6f7ff;
+}
+h1{
+	font-family: Ancizar Sans-regular;
+	font-size: 30px;
+	text-align: center;
+	color:#1aff8c;
+}
+.tablaContenido{
+  width: 10%;
+  background-color:#4dff4d;
+}
+.texto {
+	font-size: 20px;
+	color:#FFFFFF;
+	margin:1px;
+}
+.navLateral {
+  width: 15%;
+  background-color: #4dff4d;
+}
+.navLateral button a{
+  font-size: 14px;
+  display: block;
+}
+}
+
 }
